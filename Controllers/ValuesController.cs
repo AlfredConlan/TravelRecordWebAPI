@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace AzureWebAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
