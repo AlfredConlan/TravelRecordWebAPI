@@ -62,10 +62,19 @@ namespace AzureWebAPI.Controllers
         {
             using (TravelRecordWebAPI_dbEntities entities = new TravelRecordWebAPI_dbEntities())
             {
-                User user = entities.Users.Find(id);
-                entities.Users.Remove(user);
-                entities.SaveChanges();
-                return "Customer Deleted";
+                try
+                {
+                    User user = entities.Users.Find(id);
+                    entities.Users.Remove(user);
+                    entities.SaveChanges();
+                    return "Customer Deleted";
+
+                }
+                catch (Exception e)
+                {
+
+                    throw;
+                }
             }
 
         }

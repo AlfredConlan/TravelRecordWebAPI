@@ -23,13 +23,13 @@ namespace AzureWebAPI.Controllers
         }
 
         //This method will return a single Post against id 
-        public Post Get(int id)
-        {
-            using (TravelRecordWebAPI_dbEntities entities = new TravelRecordWebAPI_dbEntities())
-            {
-                return entities.Posts.FirstOrDefault(e => e.Id == id);
-            }
-        }
+        //public Post Get(int id)
+        //{
+        //    using (TravelRecordWebAPI_dbEntities entities = new TravelRecordWebAPI_dbEntities())
+        //    {
+        //        return entities.Posts.FirstOrDefault(e => e.Id == id);
+        //    }
+        //}
 
         //This method will add a new Post  
         public void POST(Post post)
